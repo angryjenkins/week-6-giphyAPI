@@ -8,20 +8,47 @@
 	<link rel="stylesheet" href="assets/css/style.css">	
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/script.js"></script>
 </head>
 <body>
+<header>
+	<div class="container">
+		<div class="row">
+			<h1>Animal GIFer!</h1>
+		</div>
+	</div>
 <div class="jumbotron">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<h1>Animal Search!</h1>
+				<div id="animalPicker">
+					<form class="form-inline">
+				  		<div class="form-group">
+					    	<label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+				    		<div class="input-group">
+				      			<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+					    	</div>
+					  	</div>
+				  		<button type="submit" class="btn btn-primary">Search Animal GIFS</button>
+					</form>
+				</div>
 			</div>
-			<div class="col-md-6"></div>
+			<div class="col-md-6">
+				<input type="text" id="animalFinder" class="form-control">
+			</div>
 		</div>
 	</div>
 </div>
-	
+<div class="container">
+	<div class="row well">
+		<div class="col-md-12" id="animalGIFs">
+			
+		</div>
+	</div>
+</div>
+<footer>
+	&copy;2016 @angryjenkins
+</footer>
 </body>
 </html>
