@@ -1,7 +1,7 @@
 
 var animals = ['lion','tiger','bear'];
 var x = $('<button>');
-var animalButton = $('#animalButtons')
+var animalButton = $('#animalButtons');
 
 function makeButtons(){
 	
@@ -16,10 +16,10 @@ function makeButtons(){
 		animalButton.append(x);
 
 		console.log(animals[i] + " button made!");	
-
+		//this works, why aren't the buttons going to #animalButtons?
 	}
 
-}
+};
 
 
 
@@ -28,6 +28,6 @@ function makeButtons(){
 
 function searchGifs(){
 	$('#animalFinder').empty();
-}
+};
 
 makeButtons();

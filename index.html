@@ -22,23 +22,40 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<div id="animalButtons">
-					<!-- add animal buttons here -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h2>add your favorite animals!</h2>
+					</div>
+					<div class="panel-body">
+						<form class="form-inline">
+					  		<div class="form-group">
+						    	<label class="sr-only" for="addAnimal">Add An Animal</label>
+					    		<div class="input-group">
+					      			<input type="text" class="form-control" id="addAnimal" placeholder="New Animal">
+						    	</div>
+						  	</div>
+					  		<button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> add</button>
+						</form>
+						<div id="animalButtons">
+							<!-- add animal buttons here -->
+						</div>
+					</div>
+					<div class="panel-footer">
+						<p>Push a button to search for animal GIFs.</p>
+					</div>
+				</div>
+				
+				
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h2>search for Animal GIFs</h2>
+					</div>
 				</div>
 				<form class="form-inline">
 			  		<div class="form-group">
-				    	<label class="sr-only" for="addAnimal">Add An Animal</label>
-			    		<div class="input-group">
-			      			<input type="text" class="form-control" id="addAnimal" placeholder="New Animal">
-				    	</div>
-				  	</div>
-			  		<button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> add</button>
-				</form>
-			</div>
-			<div class="col-md-6">
-				<form class="form-inline">
-			  		<div class="form-group">
-				    	<label class="sr-only" for="gifRequest">Amount (in dollars)</label>
+				    	<label class="sr-only" for="gifRequest">New Animal</label>
 			    		<div class="input-group">
 			      			<input type="text" class="form-control" id="gifRequest" placeholder="New Animal">
 				    	</div>
