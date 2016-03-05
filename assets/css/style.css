@@ -1,3 +1,9 @@
 .btn-primary{
-	border-radius: 4px;
+	border-radius: 12px;
 }	
+
+#animalButtons {
+	height: 200px;
+	border: 2px solid orange;
+	margin: 6px 0;
+}
