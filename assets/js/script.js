@@ -15,10 +15,14 @@ function makeButtons(){
 	//this works, why aren't the buttons going to #animalButtons?
 };
 
-for(var i=0;i<animals.length;i++){
+for(var i=0;i<animals.length;i++){makeButtons()};
 
-	makeButtons()
-};
+
+function addButtons(){
+	//TBC
+}
+
+
 
 
 
