@@ -1,26 +1,24 @@
-
 var animals = ['lion','tiger','bear'];
-var x = $('<button>');
-var animalButton = $('#animalButtons');
 
 function makeButtons(){
 	
 	//why is animals undefined? 
+	var x = $('<button class="btn btn-default btn-lg">');
+	var animalButton = $('#animalButtons');
+	x.addClass('animal');
+	x.attr('data-name', animals[i]);
+	x.text(animals[i]);
 
-	for (var i = 0; i < animals.length; i++){
+	animalButton.append(x);
 
-		x.addClass('animal');
-		x.attr('data-name', animals[i]);
-		x.text(animals[i]);
-
-		animalButton.append(x);
-
-		console.log(animals[i] + " button made!");	
-		//this works, why aren't the buttons going to #animalButtons?
-	}
-
+	console.log(animals[i] + " button made!");	
+	//this works, why aren't the buttons going to #animalButtons?
 };
 
+for(var i=0;i<animals.length;i++){
+
+	makeButtons()
+};
 
 
 
@@ -30,4 +28,3 @@ function searchGifs(){
 	$('#animalFinder').empty();
 };
 
-makeButtons();
