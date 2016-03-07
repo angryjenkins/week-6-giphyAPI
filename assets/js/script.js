@@ -18,10 +18,17 @@ function makeButtons(){
 for(var i=0;i<animals.length;i++){makeButtons()};
 
 
-function addButtons(){
-	//TBC
-}
+$('#animalButtons').on('click', function(){
+	
+	var newAnimal = $('#addAnimal').val().trim();
+	var animalButton = $('#animalButtons');
 
+	animals.push(newAnimal);
+
+	makeButtons();
+	// Creates	 a new button on click
+	return false;
+});
 
 
 
