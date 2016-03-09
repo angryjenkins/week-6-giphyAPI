@@ -11,7 +11,6 @@ function makeButtons(){
 	animalButtons.append(x);
 
 	console.log(animals[i] + " button made!");
-	$('#addAnimal').val('');
 
 	//this works, why aren't the buttons going to #animalButtons?
 };
@@ -26,11 +25,14 @@ $('#addAnimalButton').on('click', function(){
 
 	var newAnimal = $('#addAnimal').val().trim();
 
+	console.log(newAnimal);
+
 	animals.push(newAnimal);
 
 	makeButtons();
-	// Creates	 a new button on click
 	$('#addAnimal').val('');
+	
+	// Creates	 a new button on click
 	return false;
 });
 
@@ -109,6 +111,8 @@ $('.animal').on('click', function() {
 
     var animal = $(this).data('animal');
     var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + animal + "&api_key=dc6zaTOxFJmzC&limit=10";
+   
+   console.log(animal);
 
     $.ajax({
             url: queryURL,
@@ -152,6 +156,7 @@ $('.animal').on('click', function() {
                 var animalImage = $('<img>');
                 animalImage.attr('src', results[i].images.fixed_height.url);
 
+                animalDiv.addClass('col-md-6');
                 animalDiv.append(p);
                 animalDiv.append(animalImage);
 
