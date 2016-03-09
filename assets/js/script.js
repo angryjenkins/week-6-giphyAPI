@@ -31,7 +31,7 @@ $('#addAnimalButton').on('click', function(){
 
 	makeButtons();
 	$('#addAnimal').val('');
-	
+
 	// Creates	 a new button on click
 	return false;
 });
@@ -91,6 +91,7 @@ $('#gifSearch').on('click', function() {
                 var animalImage = $('<img>');
                 animalImage.attr('src', results[i].images.fixed_height.url);
 
+                animalDiv.addClass('col-md-6');
                 animalDiv.append(p);
                 animalDiv.append(animalImage);
 
