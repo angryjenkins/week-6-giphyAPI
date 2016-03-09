@@ -96,7 +96,7 @@ $('#gifSearch').on('click', function() {
                 animalDiv.append(animalImage);
 
                 $('#animalGIFs').append(animalDiv);
-    			$('#gifRequest').val('');
+			 	var animal = "";
 
                 //--------------------------------
             }
