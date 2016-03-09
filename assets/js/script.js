@@ -1,17 +1,18 @@
 var animals = ['lion','tiger','bear'];
 
 function makeButtons(){
-	$('#addAnimal').empty();
 	//why is animals undefined? 
 	var x = $('<button class="btn btn-default btn-lg">');
-	var animalButton = $('#animalButtons');
+	var animalButtons = $('#animalButtons');
 	x.addClass('animal');
 	x.attr('data-name', animals[i]);
 	x.text(animals[i]);
 
-	animalButton.append(x);
+	animalButtons.append(x);
 
-	console.log(animals[i] + " button made!");	
+	console.log(animals[i] + " button made!");
+	$('#addAnimal').val('');
+
 	//this works, why aren't the buttons going to #animalButtons?
 };
 
@@ -19,9 +20,9 @@ for(var i=0;i<animals.length;i++){makeButtons()};
 
 
 
-//add buttons - still allowing repeat buttons.	
+//add animal button
 
-$('#animalButtons').on('click', function(){
+$('#addAnimalButton').on('click', function(){
 
 	var newAnimal = $('#addAnimal').val().trim();
 	var animalButton = $('#animalButtons');
@@ -30,6 +31,7 @@ $('#animalButtons').on('click', function(){
 
 	makeButtons();
 	// Creates	 a new button on click
+	$('#addAnimal').val('');
 	return false;
 });
 
