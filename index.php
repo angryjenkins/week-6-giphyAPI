@@ -1,1 +1,1 @@
-<?php include_ince("index.html"); ?>
+<?php include_once("index.html"); ?>
