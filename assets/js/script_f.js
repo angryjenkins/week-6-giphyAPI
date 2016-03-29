@@ -1,23 +1,23 @@
 var animals = ['lion','tiger','bear'];
 var animalButtons = $('#animalButtons');
 
-function makeButtons(){
+function makeButtons(animal){ // <----- Gave it a parameter so I can make new animals
 	//why is animals undefined? 
 	var x = $('<button class="btn btn-default btn-lg">');
 	x.addClass('animal');
-	x.attr('data-animal', animals[i]);
-	x.text(animals[i]);
- 
+	x.attr('data-animal', animal); // <------ build button based on parameter
+	x.text(animal); // <--------- Add button text based on parameter
+
 	animalButtons.append(x);
 
-	console.log(animals[i] + " button made!");
+	console.log(animal + " button made!"); // <---- updated to read parameter
 
 	//this works, why aren't the buttons going to #animalButtons?
 };
 
 for(var i=0;i<animals.length;i++){
-        makeButtons(animals[i]);
-    };
+    makeButtons(animals[i]) // <--------- Made this iterate through each animal in the array and make a button for each one
+};
 
 
 
@@ -31,7 +31,7 @@ $('#addAnimalButton').on('click', function(){
 
 	animals.push(newAnimal);
 
-	makeButtons();
+	makeButtons(newAnimal); // <-------------- passed new parameter based on user input
 	$('#addAnimal').val('');
 
 	// Creates	 a new button on click
@@ -104,12 +104,14 @@ $('#gifSearch').on('click', function() {
             }
 
         });
+
+        return false; // <------------- make sure page doesn't refresh otherwise we lose the search and all new animals that were added.
     });
 
 
 //button search
 
-$(document).on('click','.animal', function() {
+$(document).on('click', '.animal', function() { // <------ Nee to use "document" so that it keeps track of new buttons that were added.
      $('#animalGIFs').empty();
 
     var animal = $(this).data('animal');
@@ -168,6 +170,4 @@ $(document).on('click','.animal', function() {
             }
 
         });
-
-
     });
